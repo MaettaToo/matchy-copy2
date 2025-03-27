@@ -56,7 +56,12 @@ console.log(noises);
 //C:none
 //E: none
 //Use bracket syntax to assign the noises property on animal object to our new noises array
-animals['noises'] = 
+animal['noises'] = noises;
+// Use any syntax to add another noise to the `noises` property on `animal`.
+animal.noises.push('whine');
+//`console.log` `animal`.
+console.log(animal);
+
 
 
 
@@ -64,8 +69,13 @@ animals['noises'] =
  * Step 4 - Review
  *
  * 1. What are the different ways you can access properties on objects?
+ * //there are two ways to access objects bracket notation and dot notation. 
+ * You should use dot notation when you know the key name. It is a very specific 
+ * way of accessing. Use bracket notation if you don't have a specific name. Also if you use bracket notation with a specific 
+ * name use the quotation marks around the name. 
  *
  * 2. What are the different ways of accessing elements on arrays?
+ * You can only access using bracket notation.
  *
  * *******************************************************************
  */
@@ -82,6 +92,37 @@ animals['noises'] =
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//Create a variable named `animals` and assign it to an empty array.
+var animals = [];
+//push animal object to the animals array 
+animals.push(animal);
+
+//console.log` `animals`.
+console.log(animals);
+ //Create a variable called `duck` and assign it to the data:{ species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] }`
+ var duck = {species :'duck',
+             name: 'Jerome',
+             noises: ['quack', 'honk', 'sneeze', 'woosh']
+   }
+ //push` `duck` to `animals`
+ animals.push(duck);
+ //`console.log` `animals`
+ console.log(animals);
+ //Create two more animal objects each with a species, a name, and at least two sounds sounds and add each one of them to `animals.
+ var cat = {species :'cat',
+            name: 'Olivia',
+           noises: ['purr', 'meow', 'chirp', 'growl']
+ }
+ var bird = {species :'bird',
+             name: 'Charlotte',
+             noises: ['chirp', 'trill', 'hoot', 'cluck']
+}
+animals.push(cat);
+animals.push(bird);
+ //console.log` `animals`t
+console.log(animals);
+//console.log` the length of `animals`
+console.log(animals.length);
 
 
 
@@ -89,6 +130,19 @@ animals['noises'] =
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//init var as array to contain list of friends. Chose array because it is the best choice to store information when creating lists
+var friends = [];
+var index;
+//init a function called `getRandom` that takes our `animals` array and returns  a random `index` of the input array, using `Math.random`
+function getRandom(array){
+ index  = Math.random(array);
+  return index;
+}
+//Using a random index from this function that you just created, get a random animal and add its `name` to `friends`.
+
+//7. [ ] `console.log` `friends`.
+//8. [ ] Using **bracket notation**, add the `friends` list as a **property** also named `friends` on one of the animals in the `animals` array
+//9. [ ] `console.log` your work.
 
 
 /**
