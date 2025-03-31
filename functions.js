@@ -85,16 +85,16 @@ function remove (animals, name){
 //init function called add with params (animals, animal)
 function add(animals, animal) {
 // init for loop to iterate over animals array
-if(animal['name'].length > 0 && animal['species'].length > 0 ){
+
     for( var i = 0; i < animals.length; i++){
-        if(animal['name'] !== animals['name'] ){
+        if(animal['name'].length > 0 && animal['species'].length > 0 &&  ){
     // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
     // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
     //create a conditional stmt that checks that  no other animals have that name.
-        // animals.push(animal);
+         animals.push(animal);
         // push new object if conditions are met 
        
-    }
+    
     }
 
 }
