@@ -132,19 +132,18 @@ console.log(animals.length);
 
 //init var as array to contain list of friends. Chose array because it is the best choice to store information when creating lists
 var friends = [];
-var index;
+
 //init a function called `getRandom` that takes our `animals` array and returns  a random `index` of the input array, using `Math.random`
 function getRandom(array){
- index  = Math.floor(Math.random(array));
- console.log(index); 
+var index  = Math.floor(Math.random(array));
+ return index; 
 }
-
 //Using a random index from this function that you just created, get a random animal and add its `name` to `friends`.
-friends.push(animals[index]['name']);
+friends.push(animals[getRandom(animals)]['name']);
 //console.log` `friends`.
 console.log(friends);
 //Use bracket notation to add `friends` array as a **property** also named `friends` on one of the animals in the `animals` array
-animals[index]['friends'] = friends;
+animals[getRandom(animals)]['friends'] = friends;
 //console.log` your work
 console.log(animals);
 
