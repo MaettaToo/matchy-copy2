@@ -77,28 +77,36 @@ function remove (animals, name){
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-   //I: function takes an array of animals, and an object representing a new animal to be added as params
-  //O: add new Object to the `animals` Array
-  //C: must pass all conditions 
-  //E: what if there is no name property or species property
+//I: function takes an array of animals, and an object representing a new animal to be added as params
+//O: add new Object to the `animals` Array
+//C: must pass all conditions 
+//E: what if there is no name property or species property
 
 //init function called add with params (animals, animal)
 function add(animals, animal) {
-// init for loop to iterate over animals array
-
-    for( var i = 0; i < animals.length; i++){
-        if(animal['name'].length > 0 && animal['species'].length > 0 && animals['name'] !== (animal['name'])){
-    // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
-    // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
-    //create a conditional stmt that checks that  no other animals have that name.
-         animals.push(animal);
-        // push new object if conditions are met 
-       
-    
-    }
-
+    // init for loop to iterate over animals array
+    //var isTrue;
+     
+     function findName(){
+        for( var i = 0; i < animals.length; i++){
+            // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
+            // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
+            //create a conditional stmt that checks thatno other animals have that name.
+                if(animals[i]['name'] !== animal['name']){
+                    return true;
+            } else {
+                return false;
+            }
+         }
+        }
+        // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
+        // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
+         
+        if(findName() === true && animal['name'].length > 0 && animal['species'].length > 0 ){
+            // push new object to animals array if conditions are met
+            animals.push(animal);
+//console.log(animals);
 }
-console.log(animals);
 }
 /**
  * You did it! You're all done with Matchy!
