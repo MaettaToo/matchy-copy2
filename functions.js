@@ -93,10 +93,10 @@ function add(animals, animal) {
             // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
             //create a conditional stmt that checks thatno other animals have that name.
                 if(animals[i]['name'] !== animal['name']){
-                    return true;
-            } else {
-                return false;
+                    return false;
             }
+                return true;
+            
          }
         }
         // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
