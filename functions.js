@@ -92,22 +92,22 @@ function add(animals, animal) {
             // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
             // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
             //create a conditional stmt that checks thatno other animals have that name.
-                if(animals[i]['name'] !== animal['name']){
-                    return false;
-            }
-                return true;
-            
+                if(animals[i]['name'] === animal['name']){
+                    return true;
+            } 
          }
+         return false;
         }
         // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
         // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
          
-        if(findName() === true && animal['name'].length > 0 && animal['species'].length > 0 ){
+        if(findName() === false && animal['name'].length > 0 && animal['species'].length > 0 ){
             // push new object to animals array if conditions are met
             animals.push(animal);
 //console.log(animals);
 }
 }
+
 /**
  * You did it! You're all done with Matchy!
  */
