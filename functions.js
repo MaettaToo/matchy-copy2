@@ -84,27 +84,25 @@ function remove (animals, name){
 
 //init function called add with params (animals, animal)
 function add(animals, animal) {
-    // init for loop to iterate over animals array
-    //var isTrue;
-     
+     //init function to house results of iterating over the animals array to determine if name property of the animal object matches name prop of animals array
      function findName(){
+        // init for loop to iterate over animals array
         for( var i = 0; i < animals.length; i++){
-            // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
-            // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
-            //create a conditional stmt that checks thatno other animals have that name.
-                if(animals[i]['name'] === animal['name']){
+            //create a conditional stmt that checks that no other animals have that name.
+                if(animals[i]['name'] === animal['name']){//if the name matches it can't be added to array, loop needs to continue until it meets a name that doesn't match
                     return true;
             } 
-         }
+         }// loop exits when it meets a name that doesn't match and goes to the next step
          return false;
         }
         // create conditional stmt that checks that the animal Object has a `name` property with a length > 0.
         // create conditional stmt that checks that the animal Object has a `species` property with a length > 0.
-         
+         //invoke function that iterates over animals array to determine if name is in the array if the name is not then eligible to be added to array  
+         // if all three conditions are met then push the animal object into the animals array 
         if(findName() === false && animal['name'].length > 0 && animal['species'].length > 0 ){
             // push new object to animals array if conditions are met
             animals.push(animal);
-//console.log(animals);
+console.log(animals); // checking my work
 }
 }
 
